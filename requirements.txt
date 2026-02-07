@@ -1,0 +1,11 @@
+PySide6
+qtawesome
+psutil
+SQLAlchemy
+requests
+WMI
+pythonnet
+groq
+tenacity
+pywin32
+PyYAML

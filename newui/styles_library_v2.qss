@@ -1,0 +1,367 @@
+/* GLOBAL TECH HUD STYLES */
+QWidget {
+    font-family: 'Segoe UI', 'Orbitron', 'Roboto', sans-serif;
+    color: #1e293b;
+    outline: none;
+}
+
+QMainWindow { background-color: transparent; }
+
+/* --- SIDEBAR --- */
+#Sidebar {
+    background-color: white;
+    border-right: 1px solid #e2e8f0;
+}
+
+#Sidebar[theme="dark"] { background-color: #0f172a; border-right: 1px solid #1e293b; }
+#Sidebar[theme="cyberpunk"] { background-color: #000000; border-right: 1px solid #f0abfc; }
+#Sidebar[theme="girly"] { background-color: #fff1f2; border-right: 1px solid #f472b6; }
+
+#LogoIcon {
+    background-color: #0f172a;
+    color: #00d1ff;
+    border: 2px solid #00d1ff;
+    font-weight: 900;
+    font-size: 18px;
+}
+#LogoTitle { font-size: 20px; font-weight: 900; color: #1e293b; letter-spacing: 3px; }
+#LogoSubtitle { font-size: 8px; font-weight: 700; color: #00d1ff; letter-spacing: 1px; }
+
+#Sidebar[theme="dark"] #LogoTitle { color: white; }
+#Sidebar[theme="cyberpunk"] #LogoTitle { color: #f0abfc; }
+#Sidebar[theme="girly"] #LogoTitle { color: #db2777; }
+
+/* --- NAVIGATION --- */
+#NavButton {
+    border: none;
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #64748b;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+#NavButton:hover { background-color: #f1f5f9; color: #00d1ff; }
+#NavButton[active="true"] { background-color: #f0fdff; color: #00d1ff; border-left: 4px solid #00d1ff; }
+
+/* Theme Overrides for Nav */
+#NavButton[theme="dark"] { color: #94a3b8; }
+#NavButton[theme="dark"]:hover { background-color: #1e293b; }
+#NavButton[theme="dark"][active="true"] { background-color: #1e293b; color: #38bdf8; border-left-color: #38bdf8; }
+
+#NavButton[theme="cyberpunk"] { color: #f0abfc; }
+#NavButton[theme="cyberpunk"]:hover { background-color: #1e1e1e; }
+#NavButton[theme="cyberpunk"][active="true"] { background-color: #1e1e1e; color: #f0abfc; border-left-color: #f0abfc; }
+
+#NavButton[theme="girly"] { color: #f472b6; }
+#NavButton[theme="girly"]:hover { background-color: #fff1f2; }
+#NavButton[theme="girly"][active="true"] { background-color: #ffe4e6; color: #db2777; border-left-color: #db2777; }
+
+/* --- HEADER --- */
+#Header { background-color: rgba(255, 255, 255, 0.5); border-bottom: 1px solid #e2e8f0; }
+#Header[theme="dark"] { background-color: rgba(15, 23, 42, 0.8); border-bottom: 1px solid #1e293b; }
+#Header[theme="cyberpunk"] { background-color: rgba(0, 0, 0, 0.9); border-bottom: 1px solid #f0abfc; }
+
+#SearchInput {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: #1e293b;
+    font-weight: 600;
+}
+#SearchInput:focus { border: 1px solid #00d1ff; background-color: white; }
+#SearchInput[theme="dark"] { background-color: #1e293b; border-color: #334155; color: white; }
+#SearchInput[theme="cyberpunk"] { background-color: #000; border-color: #f0abfc; color: #f0abfc; }
+
+#HUDClock { font-family: monospace; font-size: 14px; color: #00d1ff; font-weight: bold; }
+#HUDUser { font-weight: 900; font-size: 10px; color: #1e293b; letter-spacing: 1px; }
+
+#Header[theme="dark"] #HUDUser { color: #94a3b8; }
+#Header[theme="cyberpunk"] #HUDUser { color: #f0abfc; }
+
+/* --- CARDS & PANELS --- */
+#ViewTitle { font-size: 28px; font-weight: 900; color: #1e293b; letter-spacing: 2px; }
+#ViewSubtitle { color: #94a3b8; font-size: 12px; }
+
+#MainWin[theme="dark"] #ViewTitle { color: white; }
+#MainWin[theme="cyberpunk"] #ViewTitle { color: #f0abfc; }
+
+#IconContainer {
+    background-color: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+}
+#IconContainer:hover { border-color: #00d1ff; }
+#GameIconTitle { font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; }
+
+#MainWin[theme="dark"] #IconContainer { background-color: #1e293b; border-color: #334155; }
+#MainWin[theme="dark"] #GameIconTitle { color: #94a3b8; }
+#MainWin[theme="cyberpunk"] #IconContainer { background-color: #000; border-color: #f0abfc; }
+#MainWin[theme="cyberpunk"] #GameIconTitle { color: #f0abfc; }
+#MainWin[theme="girly"] #IconContainer { background-color: #fff1f2; border-color: #fbcfe8; }
+#MainWin[theme="girly"] #GameIconTitle { color: #be185d; }
+
+/* --- BUTTONS --- */
+#ActionBtn {
+    background-color: #00d1ff;
+    color: white;
+    border: none;
+    font-weight: 900;
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+#ActionBtn:hover { background-color: #00b4db; }
+
+#ScanBtn {
+    background-color: #0f172a;
+    color: #00d1ff;
+    border: 1px solid #00d1ff;
+    font-weight: 900;
+    font-size: 10px;
+    padding: 10px 20px;
+}
+
+#MainWin[theme="cyberpunk"] #ActionBtn { background-color: #f0abfc; color: black; }
+#MainWin[theme="cyberpunk"] #ScanBtn { background-color: black; color: #f0abfc; border-color: #f0abfc; }
+#MainWin[theme="girly"] #ActionBtn { background-color: #f472b6; }
+
+/* --- HUD LABELS --- */
+#HUDSmallLabel { color: #94a3b8; font-weight: bold; font-size: 10px; letter-spacing: 2px; }
+#HUDStatusLabel { background-color: #0f172a; color: #10b981; border: 1px solid #10b981; font-weight: bold; font-size: 10px; padding: 3px 8px; }
+#HUDCountBadge { background-color: #0f172a; color: #00d1ff; border: 1px solid #00d1ff; font-weight: 900; font-size: 10px; padding: 5px 15px; }
+
+/* --- CHAT --- */
+#ChatPanel {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-left: 2px solid rgba(0, 209, 255, 0.55);
+}
+#ChatPanel[theme="dark"] {
+    background-color: rgba(15, 23, 42, 0.55);
+    border-left: 2px solid rgba(56, 189, 248, 0.65);
+}
+#ChatPanel[theme="cyberpunk"] {
+    background-color: rgba(0, 0, 0, 0.68);
+    border-left: 2px solid rgba(240, 171, 252, 0.75);
+}
+#ChatPanel[theme="girly"] {
+    background-color: rgba(255, 241, 242, 0.55);
+    border-left: 2px solid rgba(244, 114, 182, 0.65);
+}
+
+
+#ChatBubbleUser { background-color: #e0f2fe; padding: 12px; border-radius: 15px; border-bottom-right-radius: 2px; margin-bottom: 8px; font-weight: 600; font-size: 12px; }
+#ChatBubbleAI { background-color: #f1f5f9; padding: 12px; border-radius: 15px; border-top-left-radius: 2px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 12px; }
+
+#ChatBubbleUser[theme="dark"] { background-color: #1e293b; color: #38bdf8; border: 1px solid #38bdf8; }
+#ChatBubbleAI[theme="dark"] { background-color: #0f172a; color: #f1f5f9; border: 1px solid #1e293b; }
+
+#ChatBubbleUser[theme="cyberpunk"] { background-color: #000; color: #f0abfc; border: 1px solid #f0abfc; }
+#ChatBubbleAI[theme="cyberpunk"] { background-color: #111; color: white; border: 1px solid #333; }
+
+/* --- STATS --- */
+#StatTitle { font-size: 10px; font-weight: bold; color: #94a3b8; letter-spacing: 1px; }
+#StatValue { font-size: 20px; font-weight: 900; color: #1e293b; }
+
+#MainWin[theme="dark"] #StatValue { color: white; }
+#MainWin[theme="cyberpunk"] #StatValue { color: #f0abfc; }
+
+QProgressBar {
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 1px;
+}
+QProgressBar::chunk { background-color: #00d1ff; }
+#MainWin[theme="dark"] QProgressBar { background-color: #1e293b; }
+#MainWin[theme="dark"] QProgressBar::chunk { background-color: #38bdf8; }
+#MainWin[theme="cyberpunk"] QProgressBar { background-color: #111; }
+#MainWin[theme="cyberpunk"] QProgressBar::chunk { background-color: #f0abfc; }
+
+/* --- INPUTS --- */
+#ChatInput { background-color: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 10px 20px; font-size: 13px; }
+#ChatInput:focus { border-color: #00d1ff; }
+
+#ChatInput[theme="dark"] { background-color: #0f172a; border-color: #1e293b; color: white; }
+#ChatInput[theme="cyberpunk"] { background-color: #000; border-color: #f0abfc; color: #f0abfc; border-radius: 0; }
+
+/* --- SETTINGS CARDS --- */
+#SettingsCard {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+#SettingsCard[theme="dark"] { background-color: #0f172a; border-color: #1e293b; }
+#SettingsCard[theme="cyberpunk"] { background-color: #000; border-color: #f0abfc; border-radius: 0; }
+#SettingsCard[theme="girly"] { background-color: #fff1f2; border-color: #fbcfe8; }
+
+QComboBox {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+QComboBox[theme="dark"] { background-color: #1e293b; border-color: #334155; color: white; }
+QComboBox[theme="cyberpunk"] { background-color: #000; border-color: #f0abfc; color: #f0abfc; border-radius: 0; }
+
+/* --- AI MODULE HEADER --- */
+#AIModuleHeader {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(0, 209, 255, 0.55);
+    border-radius: 8px;
+}
+#AIModuleTitle { color: #0b1220; font-weight: 900; font-size: 12px; letter-spacing: 1px; }
+#AIModuleDot { color: #00d1ff; font-size: 14px; }
+#AIModuleState { color: #00d1ff; font-weight: 800; font-size: 11px; }
+
+#MainWin[theme="dark"] #AIModuleHeader {
+    background-color: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(56, 189, 248, 0.7);
+}
+#MainWin[theme="dark"] #AIModuleTitle { color: #f1f5f9; }
+#MainWin[theme="dark"] #AIModuleDot, #MainWin[theme="dark"] #AIModuleState { color: #38bdf8; }
+
+#MainWin[theme="cyberpunk"] #AIModuleHeader {
+    background-color: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(240, 171, 252, 0.85);
+}
+#MainWin[theme="cyberpunk"] #AIModuleTitle { color: #ffffff; }
+#MainWin[theme="cyberpunk"] #AIModuleDot, #MainWin[theme="cyberpunk"] #AIModuleState { color: #f0abfc; }
+
+#MainWin[theme="girly"] #AIModuleHeader {
+    background-color: rgba(255, 241, 242, 0.7);
+    border: 1px solid rgba(244, 114, 182, 0.75);
+}
+#MainWin[theme="girly"] #AIModuleTitle { color: #4a0d2a; }
+#MainWin[theme="girly"] #AIModuleDot, #MainWin[theme="girly"] #AIModuleState { color: #f472b6; }
+
+
+
+/* ===== NEXUS LIBRARY HUD ===== */
+
+QFrame#GameIcon {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 209, 255, 0.35);
+    border-radius: 10px;
+}
+QFrame#GameIcon[hovered="true"] {
+    border: 1px solid rgba(0, 209, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+#LauncherBadge {
+    padding: 1px 8px;
+    border: 1px solid rgba(0, 209, 255, 0.55);
+    border-radius: 4px;
+    background-color: rgba(15, 23, 42, 0.65);
+    color: #e2f8ff;
+    font-weight: 900;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#FilterButton {
+    min-height: 30px;
+    padding: 0 14px;
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.55);
+    color: #0b1220;
+    border: 1px solid rgba(0, 209, 255, 0.35);
+    border-radius: 4px;
+}
+#FilterButton:hover {
+    border: 1px solid rgba(0, 209, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.78);
+}
+#FilterButton:checked {
+    background-color: rgba(0, 209, 255, 0.20);
+    border: 1px solid rgba(0, 209, 255, 1.0);
+    color: #061225;
+}
+
+#ScanBtn {
+    background-color: rgba(15, 23, 42, 0.92);
+    color: #00d1ff;
+    border: 1px solid rgba(0, 209, 255, 0.95);
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 10px 18px;
+    border-radius: 4px;
+}
+#ScanBtn:hover {
+    background-color: rgba(0, 209, 255, 0.12);
+}
+#ActionBtn {
+    background-color: rgba(0, 209, 255, 0.92);
+    color: #061225;
+    border: 1px solid rgba(0, 209, 255, 1.0);
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 10px 18px;
+    border-radius: 4px;
+}
+#ActionBtn:hover {
+    background-color: rgba(0, 209, 255, 0.75);
+}
+
+/* Theme overrides */
+#MainWin[theme="dark"] QFrame#GameIcon {
+    background-color: rgba(15, 23, 42, 0.78);
+    border: 1px solid rgba(0, 209, 255, 0.28);
+}
+#MainWin[theme="dark"] QFrame#GameIcon[hovered="true"] {
+    border: 1px solid rgba(0, 209, 255, 0.95);
+    background-color: rgba(15, 23, 42, 0.90);
+}
+#MainWin[theme="dark"] #FilterButton {
+    background-color: rgba(15, 23, 42, 0.70);
+    color: #e2f8ff;
+}
+
+#MainWin[theme="cyberpunk"] QFrame#GameIcon {
+    background-color: rgba(15, 11, 26, 0.80);
+    border: 1px solid rgba(255, 0, 191, 0.35);
+}
+#MainWin[theme="cyberpunk"] QFrame#GameIcon[hovered="true"] {
+    border: 1px solid rgba(255, 0, 191, 0.95);
+}
+#MainWin[theme="cyberpunk"] #LauncherBadge {
+    border: 1px solid rgba(255, 0, 191, 0.55);
+    background-color: rgba(0, 0, 0, 0.55);
+}
+#MainWin[theme="cyberpunk"] #FilterButton {
+    border: 1px solid rgba(255, 0, 191, 0.35);
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+}
+#MainWin[theme="cyberpunk"] #FilterButton:checked {
+    background-color: rgba(255, 0, 191, 0.20);
+    border: 1px solid rgba(255, 0, 191, 1.0);
+}
+
+#MainWin[theme="girly"] QFrame#GameIcon {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 77, 166, 0.35);
+}
+#MainWin[theme="girly"] QFrame#GameIcon[hovered="true"] {
+    border: 1px solid rgba(255, 77, 166, 0.95);
+}
+#MainWin[theme="girly"] #LauncherBadge {
+    border: 1px solid rgba(255, 77, 166, 0.55);
+    background-color: rgba(255, 77, 166, 0.20);
+    color: #4a0033;
+}
+#MainWin[theme="girly"] #FilterButton {
+    border: 1px solid rgba(255, 77, 166, 0.35);
+}
+#MainWin[theme="girly"] #FilterButton:checked {
+    background-color: rgba(255, 77, 166, 0.22);
+    border: 1px solid rgba(255, 77, 166, 1.0);
+}

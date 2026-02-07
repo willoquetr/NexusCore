@@ -1,0 +1,70 @@
+🎯 Version exacte à dire à Gemini (copie/colle)
+
+Dis-lui ça, mot pour mot si tu veux :
+
+Utilise un système de backgrounds en couches :
+
+Layer 1 : Background BASE Arctic White à 100 % (fond principal)
+
+Layer 2 : HUD Overlay Arctic White avec une opacité entre 15 % et 25 % (20 % par défaut)
+
+Layer 3 : Noise / Grid avec une opacité entre 4 % et 8 % (6 % par défaut)
+
+Les opacités doivent rester ajustables dynamiquement selon le thème et la lisibilité.
+
+👉 Ça lui donne :
+
+la logique
+
+les bornes
+
+la liberté d’ajuster sans casser le design
+
+🧠 Pourquoi ces valeurs sont bonnes
+Background BASE – 100 %
+
+C’est l’identité
+
+Il doit “porter” l’app
+
+Jamais en dessous de 100 %
+
+HUD Overlay – ~20 %
+
+À 10 % → trop discret
+
+À 30 % → trop chargé
+
+20 % = esport / IA / premium
+
+💡 Astuce : sur des écrans très lumineux, 18 % est parfois plus clean.
+
+Noise / Grid – ~6 %
+
+À 2 % → inutile
+
+À 10 % → sale
+
+4–6 % = invisible consciemment, ressenti inconsciemment
+
+C’est exactement ce que font :
+
+Apple (iOS / macOS)
+
+Tesla UI
+
+UI de jeux AAA
+
+⚠️ 2 règles IMPORTANTES à respecter
+
+Dis aussi à Gemini (ou garde-le en tête) :
+
+Le noise doit être en repeat
+
+jamais stretch
+
+sinon il devient flou / moche
+
+Le HUD Overlay ne doit JAMAIS gêner le texte
+
+si un texte passe dessus → soit masque, soit baisse opacity localement

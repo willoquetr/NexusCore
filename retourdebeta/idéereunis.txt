@@ -1,0 +1,24 @@
+
+
+ — 20:51
+Launcher avec update pour client
+Jeux en double
+Jeux sans icone
+Onglet favoris + click droit rajouter au favoris 
+
+THUOT81
+
+ — 20:51
+Correction UI (text au mauvais endroit)
+Pourcentage utilisation fluctuant comparé au mien surtout le GPU (ram semble être identique, les autres ont a peu prêt 10% de plus que leur utils dans taskmgr)
+
+
+FoZ
+
+ — 20:53
+Creer un logo .ico
+
+FoZ
+
+ — 21:05
+Flashscreen avec loading avant lancement visuel de lapp

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Nexus Core Specific
+data/nexus_core.db
+data/ludusavi_manifest.yaml
+data/ludusavi.db
+logs/
+*.log
+*.jsonl
+
+# Build & Packaging
+build/
+dist/
+*.spec
+
+# System
+.DS_Store
+Thumbs.db

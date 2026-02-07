@@ -1,0 +1,233 @@
+/* GLOBAL TECH HUD STYLES */
+QWidget {
+    font-family: 'Orbitron', 'Segoe UI Semibold', 'Consolas', sans-serif;
+    color: #1e293b;
+    outline: none;
+}
+
+QMainWindow { background-color: transparent; }
+
+/* --- SIDEBAR --- */
+#Sidebar {
+    background-color: transparent;
+    border: none;
+    border-image: url("assets/sidepanel.png") 2 2 2 2 stretch stretch;
+}
+
+#LogoIcon {
+    background-color: transparent;
+    border: none;
+}
+
+/* --- NAVIGATION --- */
+#NavButton {
+    border: none;
+    text-align: left;
+    padding: 12px 30px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff; /* Texte Blanc par défaut pour l'ombre */
+    letter-spacing: 2px;
+    min-height: 55px;
+    background-color: transparent;
+    border-image: url("assets/buttonsidepanel.png") 5 5 5 5 stretch stretch;
+}
+
+#NavButton:hover, #NavButton[active="true"] { 
+    color: #1e293b; /* Texte sombre au survol sur fond clair */
+    border-image: url("assets/buttonsidepanelhover.png") 5 5 5 5 stretch stretch;
+}
+
+/* --- HEADER --- */
+#Header { 
+    background-color: transparent; 
+    border: none;
+    border-image: url("assets/headbar.png") 0 0 0 0 stretch stretch;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+#SearchInput {
+    background-color: transparent;
+    border: none;
+    border-image: url("assets/searchbar.png") 10 20 10 20 stretch stretch;
+    padding: 0 35px; 
+    height: 50px;
+    min-width: 158px;
+    max-width: 158px;
+    color: #ffffff; /* Texte Blanc */
+    font-weight: 800;
+    font-size: 11px;
+}
+
+/* --- CHAT --- */
+#ChatPanel {
+    background-color: transparent;
+    border: none;
+    border-image: url("assets/sidepanel.png") 2 2 2 2 stretch stretch;
+}
+
+#ChatInputContainer {
+    border-image: url("assets/searchbar.png") 5 5 5 5 stretch stretch;
+    background-color: transparent;
+}
+
+#ChatInput { 
+    background-color: transparent; 
+    border: none; 
+    color: #ffffff; /* Texte Blanc */
+    font-size: 11px;
+    font-weight: 800;
+}
+
+#ChatSendBtn {
+    background-color: rgba(0, 209, 255, 0.1);
+    color: #ffffff; /* Texte Blanc */
+    border: 1px solid rgba(0, 209, 255, 0.4);
+    font-weight: 900;
+    font-size: 10px;
+    height: 32px;
+    border-radius: 4px;
+}
+#ChatSendBtn:hover {
+    background-color: rgba(0, 209, 255, 0.25);
+    border-color: #00d1ff;
+}
+
+/* AI MODULE HEADER */
+#AIModuleHeader {
+    background-color: transparent;
+    min-height: 40px;
+}
+#AIModuleTitle { color: #1e293b; font-weight: 900; font-size: 16px; letter-spacing: 2px; }
+#AIModuleState { color: #00d1ff; font-weight: 900; font-size: 16px; }
+#AIModuleDot { color: #00d1ff; font-size: 18px; }
+
+#HUDClock { font-family: 'Consolas'; font-size: 16px; color: #00d1ff; font-weight: bold; letter-spacing: 1px; }
+#HUDUser { font-weight: 900; font-size: 10px; color: #64748b; letter-spacing: 2px; }
+
+#ChatBubbleUser { 
+    background-color: transparent; 
+    color: #00d1ff;
+    padding: 10px; 
+    margin-bottom: 5px; 
+    font-weight: 700; 
+    font-size: 11px;
+    border-bottom: 1px solid rgba(0, 209, 255, 0.1);
+}
+#ChatBubbleAI { 
+    background-color: transparent; 
+    color: #1e293b;
+    padding: 10px; 
+    margin-bottom: 15px; 
+    font-size: 11px;
+    border-left: 2px solid #00d1ff;
+}
+
+#HUDSmallLabel { color: #64748b; font-weight: bold; font-size: 9px; letter-spacing: 2px; }
+#HUDStatusLabel { background-color: transparent; color: #10b981; border: none; font-weight: 900; font-size: 11px; }
+
+/* Filter Buttons */
+#FilterButton {
+    background-color: rgba(0, 209, 255, 0.05);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    color: #64748b;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 4px;
+    min-width: 80px;
+}
+#FilterButton:checked, #FilterButton:hover {
+    background-color: rgba(0, 209, 255, 0.15);
+    border-color: #00d1ff;
+    color: #00d1ff;
+}
+
+#ViewTitle { font-size: 24px; font-weight: 900; color: #1e293b; letter-spacing: 2px; }
+#ViewSubtitle { color: #64748b; font-size: 11px; font-weight: 600; }
+#StatTitle { font-size: 10px; font-weight: bold; color: #64748b; letter-spacing: 1px; }
+#StatValue { font-size: 22px; font-weight: 900; color: #00d1ff; }
+
+QProgressBar {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    height: 2px;
+}
+QProgressBar::chunk { background-color: #00d1ff; }
+
+/* --- TELEMETRY CARDS --- */
+#StatCard {
+    background-color: transparent;
+    border: none;
+    border-image: url("assets/telemetrycard1.png") 10 10 10 10 stretch stretch;
+}
+
+#ThermalCard {
+    background-color: transparent;
+    border: none;
+    border-image: url("assets/telemetrycard2.png") 10 10 10 10 stretch stretch;
+}
+
+#ExitButton {
+    background-color: transparent;
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    font-weight: 900;
+    font-size: 10px;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+/* --- WINDOW BUTTONS --- */
+#WinBtn, #WinBtnClose {
+    background-color: transparent;
+    border: none;
+    width: 35px;
+    height: 30px;
+}
+#WinBtn:hover {
+    background-color: rgba(0, 209, 255, 0.15);
+}
+#WinBtnClose:hover {
+    background-color: #ef4444;
+}
+
+#FooterNote {
+    color: #00d1ff;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    min-height: 20px;
+}
+
+/* --- COOL GAMER SCROLLBAR --- */
+QScrollBar:vertical {
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    width: 6px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 3px;
+}
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #00d1ff, stop:1 #0095ff);
+    min-height: 20px;
+    border-radius: 3px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Settings Cards */
+#SettingsCard {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    border-radius: 8px;
+}

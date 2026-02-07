@@ -1,0 +1,152 @@
+{
+    "rust": {
+        "config_file": "client.cfg",
+        "relative_path": "cfg",
+        "format": "key_value_space",
+        "search_in": "install_dir"
+    },
+    "cyberpunk 2077": {
+        "config_file": "usersettings.json",
+        "relative_path": "CD Projekt Red/Cyberpunk 2077",
+        "format": "json",
+        "search_in": "local_appdata"
+    },
+    "valorant": {
+        "config_file": "GameUserSettings.ini",
+        "relative_path": "VALORANT/Saved/Config",
+        "format": "ini",
+        "search_in": "local_appdata"
+    },
+    "fortnite": {
+        "config_file": "GameUserSettings.ini",
+        "relative_path": "FortniteGame/Saved/Config/WindowsClient",
+        "format": "ini",
+        "search_in": "local_appdata"
+    },
+    "minecraft": {
+        "config_file": "options.txt",
+        "relative_path": ".minecraft",
+        "format": "key_value_space",
+        "search_in": "appdata"
+    },
+    "the witcher 3": {
+        "config_file": "user.settings",
+        "relative_path": "The Witcher 3",
+        "format": "ini",
+        "search_in": "documents"
+    },
+    "apex legends": {
+        "config_file": "videoconfig.txt",
+        "relative_path": "Respawn/Apex/local",
+        "format": "key_value_space",
+        "search_in": "saved_games"
+    },
+    "cs2": {
+        "config_file": "cs2_video.txt",
+        "relative_path": "game/csgo/cfg",
+        "format": "key_value_space",
+        "search_in": "install_dir"
+    },
+    "league of legends": {
+        "config_file": "game.cfg",
+        "relative_path": "Config",
+        "format": "ini",
+        "search_in": "install_dir"
+    },
+    "rainbow six siege": {
+        "config_file": "GameSettings.ini",
+        "relative_path": "My Games/Rainbow Six - Siege",
+        "format": "ini",
+        "search_in": "documents"
+    },
+    "elden ring": {
+        "config_file": "GraphicsConfig.xml",
+        "relative_path": "EldenRing",
+        "format": "xml",
+        "search_in": "appdata"
+    },
+    "overwatch 2": {
+        "config_file": "Settings_v0.ini",
+        "relative_path": "Overwatch/Settings",
+        "format": "ini",
+        "search_in": "documents"
+    },
+    "rocket league": {
+        "config_file": "TASystemSettings.ini",
+        "relative_path": "My Games/Rocket League/TAGame/Config",
+        "format": "ini",
+        "search_in": "documents"
+    },
+    "starfield": {
+        "config_file": "StarfieldPrefs.ini",
+        "relative_path": "My Games/Starfield",
+        "format": "ini",
+        "search_in": "documents"
+    },
+    "red dead redemption 2": {
+        "config_file": "system.xml",
+        "relative_path": "Rockstar Games/Red Dead Redemption 2/Settings",
+        "format": "xml",
+        "search_in": "documents"
+    },
+    "dead by daylight": {
+        "config_file": "GameUserSettings.ini",
+        "relative_path": "DeadByDaylight/Saved/Config/WindowsNoEditor",
+        "format": "ini",
+        "search_in": "local_appdata"
+    },
+    "ark: survival evolved": {
+        "config_file": "GameUserSettings.ini",
+        "relative_path": "ShooterGame/Saved/Config/WindowsNoEditor",
+        "format": "ini",
+        "search_in": "install_dir"
+    },
+    "destiny 2": {
+        "config_file": "prefs.xml",
+        "relative_path": "Bungie/Destiny PC/prefs",
+        "format": "xml",
+        "search_in": "appdata"
+    },
+    "warframe": {
+        "config_file": "settings",
+        "relative_path": "Warframe",
+        "format": "json",
+        "search_in": "local_appdata"
+    },
+    "sims 4": {
+        "config_file": "Options.ini",
+        "relative_path": "Electronic Arts/The Sims 4",
+        "format": "ini",
+        "search_in": "documents"
+    },
+    "genshin impact": {
+        "config_file": "config.ini",
+        "relative_path": "Genshin Impact/Genshin Impact Game",
+        "format": "ini",
+        "search_in": "install_dir"
+    },
+    "gta v": {
+        "config_file": "settings.xml",
+        "relative_path": "Rockstar Games/GTA V",
+        "format": "xml",
+        "search_in": "documents"
+    },
+    "call of duty": {
+        "config_file": "options.3.cod22.cst",
+        "relative_path": "Call of Duty/players",
+        "format": "key_value_space",
+        "search_in": "documents"
+    },
+    "battlefield 2042": {
+        "config_file": "PROFSAVE_profile",
+        "relative_path": "Battlefield 2042/settings",
+        "format": "key_value_space",
+        "search_in": "documents"
+    },
+    "sea of thieves": {
+        "config_file": "GameUserSettings.ini",
+        "relative_path": "Athena/Saved/Config/WindowsNoEditor",
+        "format": "ini",
+        "search_in": "local_appdata"
+    }
+}

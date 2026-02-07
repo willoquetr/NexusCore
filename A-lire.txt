@@ -1,0 +1,58 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                                  PROTOCOLE NEXUS - BETA TEST                                      ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+1. PRÉSENTATION 
+  
+   Bienvenue sur Nexus Core, votre interface HUD haute performance développée par Foz.
+   Nexus regroupe intelligemment tous vos launchers (Steam, Epic, Riot, Battle.net, 
+   Ubisoft, EA), vos jeux et vos applications essentielles (comme Discord).
+   
+   L'objectif : centraliser votre expérience gaming et utiliser l'IA pour 
+   diagnostiquer et optimiser vos réglages in-game en fonction de votre matériel.
+
+   ---
+
+2. CONFIGURATION DE L'IA (NOYAU GROQ)
+  
+   Pour activer l'intelligence Nexus, vous devez configurer votre propre liaison satellite :
+
+   > 🚀 Étape 1 : Créer votre accès IA (Gratuit et Ultra-Rapide)
+   > 1. Allez sur https://console.groq.com/
+   > 2. Connectez-vous avec votre compte Google ou GitHub.
+   > 3. Dans le menu de gauche, cliquez sur "API Keys".
+   > 4. Cliquez sur "Create API Key", nommez-la "Nexus Test" et copiez le code (type gsk_...).
+   > 5. DANS NEXUS CORE : Allez dans l'onglet CORE_CONFIG, collez la clé et cliquez sur
+   **UPDATE_AI_CORE**.
+
+   ---
+
+3. LE PLAN DE TEST
+
+   Nous avons besoin de vos retours sur ces points critiques :
+
+   1. HARDWARE SYNC : "Vois-tu tes températures CPU/GPU s'afficher ?"
+      ⚠️ IMPORTANT : Lancez le fichier NexusCore.exe en tant qu'administrateur 
+      (Clic droit -> Exécuter en tant qu'admin) pour autoriser la lecture des sondes.
+
+   2. DATA LIBRARY : "Clique sur SCAN SYSTEM."
+      - L'app trouve-t-elle bien tous vos jeux ? (Steam, Epic, Ubisoft, Riot, etc.)
+      - Le scan est-il rapide et fluide (pas de freeze de l'interface) ?
+
+   3. L'IA NEXUS : "Testez la capacité d'analyse."
+      - Demandez : "J'ai des ralentissements sur [Nom d'un jeu]".
+      - Regardez si elle va chercher vos stats de session et vos réglages toute seule.
+
+   4. UI/UX : "Le texte est-il lisible ? Le switch Français/Anglais fonctionne-t-il ?"
+
+   ---
+
+4. ENVOI DES LOGS (IMPORTANT)
+
+   Si vous rencontrez un bug, un crash ou une erreur de détection, envoyez à Foz le
+   dossier "logs" qui se trouve à côté de l'exécutable. Ces fichiers contiennent 
+   l'historique technique nécessaire pour corriger l'application.
+
+   ---
+   Nexus Core: System Stable. Multilingual Protocol Online. 
+   Made by Foz.

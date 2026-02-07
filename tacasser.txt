@@ -1,0 +1,108 @@
+│ 279                                                                                                       │
+│ 280   def run(self):                                                                                      │
+│ 281       all_items = []                                                                                  │
+│ 282 +     seen_exes = set()                                                                               │
+│ 283       logger.info("Library: Starting system-wide game scan...")                                       │
+│ 284 +                                                                                                     │
+│ 285 +     def add_item(title, launcher, exe):                                                             │
+│ 286 +         if not exe:                                                                                 │
+│ 287 +             all_items.append({"title": title, "launcher": launcher, "exe": None})                   │
+│ 288 +             return                                                                                  │
+│ 289 +                                                                                                     │
+│ 290 +         normalized_exe = os.path.normpath(exe).lower()                                              │
+│ 291 +         if normalized_exe not in seen_exes:                                                         │
+│ 292 +             all_items.append({"title": title, "launcher": launcher, "exe": exe})                    │
+│ 293 +             seen_exes.add(normalized_exe)                                                           │
+│ 294 +                                                                                                     │
+│ 295       try:                                                                                            │
+│ 296           # Launchers                                                                                 │
+│ 297           from plugins.scanner_launchers.scanner import scan_launchers                                │
+│ 298           launchers = scan_launchers()                                                                │
+│ 287 -         logger.info(f"Scanner: Found {len(launchers)} launchers.")                                  │
+│ ═════════════════════════════════════════════════════════════════════════════════════════════════════════ │
+│ 299           for l in launchers:                                                                         │
+│ 289 -             all_items.append({"title": l['title'], "launcher": "Launcher", "exe": l['exe']})        │
+│ ═════════════════════════════════════════════════════════════════════════════════════════════════════════ │
+│ 300 +             add_item(l['title'], "Launcher", l['exe'])                                              │
+│ 301                                                                                                       │
+│ 302           # Steam                                                                                     │
+│ 303           from plugins.scanner_steam.scanner import scan_steam_games                                  │
+│ 293 -         steam_games = scan_steam_games()                                                            │
+│ 294 -         logger.info(f"Scanner: Found {len(steam_games)} Steam games.")                              │
+│ 295 -         for g in steam_games:                                                                       │
+│ ═════════════════════════════════════════════════════════════════════════════════════════════════════════ │
+│ 304 +         for g in scan_steam_games():                                                                │
+│ 305               exe_p = None                                                                            │
+│ 306               if os.path.exists(g['install_dir']):                                                    │
+│ 307                   for f in os.listdir(g['install_dir']):                                              │
+│ 299 -                     if f.endswith(".exe") and not any(x in f.lower() for x in ["unity", "crash",    │
+│     "helper", "redist"]):                                                                                 │
+│ ═════════════════════════════════════════════════════════════════════════════════════════════════════════ │
+│ 308 +                     if f.endswith(".exe") and not any(x in f.lower() for x in ["unity", "crash",    │
+│     "helper", "redist", "setup"]):                                                                        │
+│ 309                           exe_p = os.path.join(g['install_dir'], f)                                   │
+│ 310                           break                                                                       │
+│ 302 -             all_items.append({"title": g['title'], "launcher": "Steam", "exe": exe_p})              │
+│ ═════════════════════════════════════════════════════════════════════════════════════════════════════════ │
+│ 311 +             add_item(g['title'], "Steam", exe_p)                                                    │
+│ 312                                                                                                       │
+│ 313           # Epic                                                                                      │
+│ 314           from plugins.scanner_epic import scan_epic_games                                            │
+│ 306 -         epic_games = scan_epic_games()                                                              │
+│ 307 -         logger.info(f"Scanner: Found {len(epic_games)} Epic games.")                                │
+│ 308 -         for g in epic_games:                                                                        │
+│ 309 -             all_items.append({"title": g['title'], "launcher": "Epic", "exe": g['exe']})            │
+│ 315 +         for g in scan_epic_games():                                                                 │
+│ 316 +             add_item(g['title'], "Epic", g['exe'])                                                  │
+│ 317                                                                                                       │
+│ 318           # Ubisoft                                                                                   │
+│ 319           try:                                                                                        │
+│ 320               from plugins.scanner_ubisoft import scan_ubisoft_games                                  │
+│ 314 -             ubi_games = scan_ubisoft_games()                                                        │
+│ 315 -             logger.info(f"Scanner: Found {len(ubi_games)} Ubisoft games.")                          │
+│ 316 -             for g in ubi_games:                                                                     │
+│ 317 -                 all_items.append({"title": g['title'], "launcher": "Ubisoft", "exe": g['exe']})     │
+│ 318 -         except Exception as e:                                                                      │
+│ 319 -             logger.debug(f"Scanner: Ubisoft scan failed or not installed ({e})")                    │
+│ 321 +             for g in scan_ubisoft_games():                                                          │
+│ 322 +                 add_item(g['title'], "Ubisoft", g['exe'])                                           │
+│ 323 +         except: pass                                                                                │
+│ 324                                                                                                       │
+│ 325           # EA                                                                                        │
+│ 326           try:                                                                                        │
+│ 327               from plugins.scanner_ea import scan_ea_games                                            │
+│ 324 -             ea_games = scan_ea_games()                                                              │
+│ 325 -             logger.info(f"Scanner: Found {len(ea_games)} EA games.")                                │
+│ 326 -             for g in ea_games:                                                                      │
+│ 327 -                 all_items.append({"title": g['title'], "launcher": "EA", "exe": g['exe']})          │
+│ 328 -         except Exception as e:                                                                      │
+│ 329 -             logger.debug(f"Scanner: EA scan failed or not installed ({e})")                         │
+│ 328 +             for g in scan_ea_games():                                                               │
+│ 329 +                 add_item(g['title'], "EA", g['exe'])                                                │
+│ 330 +         except: pass                                                                                │
+│ 331                                                                                                       │
+│ 332           # Battle.net                                                                                │
+│ 333           try:                                                                                        │
+│ 334               from plugins.scanner_battlenet import scan_battlenet_games                              │
+│ 334 -             bnet_games = scan_battlenet_games()                                                     │
+│ 335 -             logger.info(f"Scanner: Found {len(bnet_games)} Battle.net games.")                      │
+│ 336 -             for g in bnet_games:                                                                    │
+│ 337 -                 all_items.append({"title": g['title'], "launcher": "Battle.net", "exe": g['exe']})  │
+│ 338 -         except Exception as e:                                                                      │
+│ 339 -             logger.debug(f"Scanner: Battle.net scan failed ({e})")                                  │
+│ 335 +             for g in scan_battlenet_games():                                                        │
+│ 336 +                 add_item(g['title'], "Battle.net", g['exe'])                                        │
+│ 337 +         except: pass                                                                                │
+│ 338                                                                                                       │
+│ 339           # Riot                                                                                      │
+│ 340           try:                                                                                        │
+│ 341               from plugins.scanner_riot import scan_riot_games                                        │
+│ 344 -             riot_games = scan_riot_games()                                                          │
+│ 345 -             logger.info(f"Scanner: Found {len(riot_games)} Riot games.")                            │
+│ 346 -             for g in riot_games:                                                                    │
+│ 347 -                 all_items.append({"title": g['title'], "launcher": "Riot", "exe": g['exe']})        │
+│ 348 -         except Exception as e:                                                                      │
+│ 349 -             logger.debug(f"Scanner: Riot scan failed ({e})")                                        │
+│ 342 +             for g in scan_riot_games():                                                             │
+│ 343 +                 add_item(g['title'], "Riot", g['exe'])                                              │
+│ 344 +         except: pass      
