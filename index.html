@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Core | The Future of Gaming Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d1ff;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            background-image: url('assets/backgroundmain.png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* --- EFFET SCAN LASER --- */
+        .scan-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            opacity: 0.5;
+            z-index: 9999;
+            animation: scan 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+
+        /* --- HEADER --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle, rgba(0, 209, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .logo {
+            width: 250px;
+            filter: drop-shadow(0 0 20px var(--primary));
+            margin-bottom: 20px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--primary);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* --- BOUTON DOWNLOAD --- */
+        .btn-download {
+            padding: 15px 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 900;
+            color: #fff;
+            background: rgba(30, 41, 59, 0.8); /* Fond gris sombre transparent */
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(0, 209, 255, 0.3);
+        }
+
+        .btn-download:hover {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 30px var(--primary);
+        }
+
+        /* --- SECTION FEATURES --- */
+        .features {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 209, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-brand {
+            color: var(--primary);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scan-line"></div>
+
+    <header>
+        <img src="assets/logonexuscore.png" alt="Nexus Core Logo" class="logo">
+        <h1>NEXUS CORE</h1>
+        <p class="tagline">L'IA AU SERVICE DE VOS PERFORMANCES</p>
+        <a href="#" class="btn-download">TÉLÉCHARGER LA BETA</a>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>🤖 OPTIMISATION IA</h3>
+            <p>Notre IA analyse vos fichiers de configuration réels et compare vos réglages avec votre matériel pour vous proposer le meilleur équilibre entre FPS et fidélité visuelle.</p>
+        </div>
+        <div class="feature-card">
+            <h3>📊 DIAGNOSTIC DE SESSION</h3>
+            <p>Nexus Core surveille vos pics de température et de charge. Après chaque jeu, l'IA diagnostique les causes de vos lags ou ralentissements et propose des solutions concrètes.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🎮 HUB UNIFIÉ</h3>
+            <p>Plus besoin de chercher vos jeux. Nexus centralise Steam, Epic, Battle.net et vos applications de chat comme Discord dans un HUD haute technologie ultra-fluide.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <span class="footer-brand">NEXUS CORE</span>. Made by <span style="color:var(--primary)">Foz</span>.</p>
+    </footer>
+
+</body>
+</html>
